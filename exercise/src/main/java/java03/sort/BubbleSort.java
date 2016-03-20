@@ -1,0 +1,44 @@
+package java03.sort;
+
+/**
+ * 冒泡排序
+ * 1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+ * 2. 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。
+ * 3. 针对所有的元素重复以上的步骤，除了最后一个。
+ * 4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+ *
+ * 参考网址：http://www.cnblogs.com/kkun/archive/2011/11/23/2260280.html
+ */
+public class BubbleSort {
+
+    public int[] nums = {6, 2, 4, 1, 5, 9};
+
+    public void outPut(int[] nums){
+        for(int num : nums){
+            System.out.print(num + " ");
+        }
+    }
+
+    //解法一
+    public int[] bubbleSort(int[] nums){
+        int length = nums.length;
+        int temp;
+        for(int i = 0; i < length; i++){
+            for(int j = 0; j < length - i - 1; j++){
+                if(nums[j] > nums[j + 1]){
+                    temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        }
+        return nums;
+    }
+
+
+    public static void main(String[] args){
+
+        BubbleSort bs = new BubbleSort();
+        bs.outPut(bs.bubbleSort(bs.nums));
+    }
+}
