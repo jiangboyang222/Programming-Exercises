@@ -11,8 +11,10 @@ package java03.sort;
  */
 public class BubbleSort {
 
+    //定义数组
     public int[] nums = {6, 2, 4, 1, 5, 9};
 
+    //输出数组
     public void outPut(int[] nums){
         for(int num : nums){
             System.out.print(num + " ");
@@ -20,11 +22,12 @@ public class BubbleSort {
     }
 
     //解法一
+    //从小至大排序
     public int[] bubbleSort(int[] nums){
         int length = nums.length;
         int temp;
-        for(int i = 0; i < length; i++){
-            for(int j = 0; j < length - i - 1; j++){
+        for(int i = 0; i < length; i++){//比较的回数
+            for(int j = 0; j < length - 1 - i; j++){//两个数比较的次数 = 数据长度 - 1，但是每次比较后确定的数值则无需再比较 ，所以 - i
                 if(nums[j] > nums[j + 1]){
                     temp = nums[j];
                     nums[j] = nums[j + 1];
