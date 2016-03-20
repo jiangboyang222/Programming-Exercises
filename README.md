@@ -4,11 +4,15 @@
 目录结构：
 
 Java03    ——>    运算符、表达式、语句
+
          |
+         
           ————>    For01_NarcissisticNumber——水仙花数
           
 java03.sort     ——>    排序
+
                 |
+                
                 ————>    BubbleSort——冒泡排序
 
 
