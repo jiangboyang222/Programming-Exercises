@@ -38,7 +38,6 @@ public class BubbleSort {
         return nums;
     }
 
-
     public static void main(String[] args){
 
         BubbleSort bs = new BubbleSort();
